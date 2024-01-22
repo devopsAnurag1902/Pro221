@@ -20,6 +20,7 @@
 				projectPath="${testproject.home}" 
 				resultsPath="${testproject.results}" 
 				resultsPathDisposition="Replace" 
+				licensePath="${license.path}"
 				testEnvironment="" 
 				webBrowser="Chrome" 
 				webBrowserConfiguration="Full Screen"
