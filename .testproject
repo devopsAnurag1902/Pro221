@@ -8,6 +8,18 @@
   <sourcePath>src</sourcePath>
   <secureStoragePath>.secrets</secureStoragePath>
   <browserDebugPort>0</browserDebugPort>
+  <connectionClasses>
+    <connectionClass name="ui">
+      <connections>
+        <connection id="0361bcaa-3ba0-4030-b9da-2414ab954e91" name="google">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=http://google.com"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+  </connectionClasses>
   <browserConfigurations>
     <browserConfiguration adjustBrowserWidthForChromeIde="true" browserHeight="0" browserWidth="0" name="Full Screen">
       <summary>Full screen with Test Builder adjustment</summary>
