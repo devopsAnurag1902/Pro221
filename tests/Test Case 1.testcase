@@ -56,7 +56,7 @@
         </argument>
         <argument id="reuseConnectionName"/>
         <argument id="privateBrowsingMode">
-          <value class="value" valueClass="boolean">true</value>
+          <value class="value" valueClass="boolean">false</value>
         </argument>
         <argument id="webBrowser"/>
       </arguments>
