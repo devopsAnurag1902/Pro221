@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase guid="21c46cc9-f327-4053-9cd6-79fc86a5f37f" id="0">
+<testCase guid="21c46cc9-f327-4053-9cd6-79fc86a5f37f" id="2">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="601228fd-e810-4d4c-83d3-f64d3c211d2a" name="SetValues" testItemId="1" title="Set Values: var">
@@ -61,19 +61,19 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="b3ab1f3d-9cc0-41c2-8d29-094ea63813ba" name="UiWithScreen" testItemId="4" title="On MyPageObject page">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="c453a21f-2399-4acb-af5e-8a42201dbf48" name="UiWithScreen" testItemId="7" title="On google page">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">google</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.MyPageObject"/>
+          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.google"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On MyPageObject page</value>
+          <value class="value" valueClass="string">On google page</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -88,17 +88,15 @@
         <argument id="captureAfter">
           <value class="value" valueClass="string">false</value>
         </argument>
-        <argument id="uiTargetUrl">
-          <value class="value" valueClass="string">www.google.com</value>
-        </argument>
+        <argument id="uiTargetUrl"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="5">
+        <clause name="substeps" testItemId="8">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="ae9d67a3-91b1-426c-8125-f3eb23b59227" name="UiDoAction" testItemId="6" title="Set the Search to test">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="2e3118a4-8060-483b-a230-2e096053f982" name="UiDoAction" testItemId="9" title="Set the Search 12 to test">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=search&amp;pageId=pageobjects.MyPageObject"/>
+                  <value class="uiLocator" uri="ui:pageobject:field?field=search12&amp;pageId=pageobjects.google"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -113,7 +111,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="captureBefore">
-                  <value class="value" valueClass="string">true</value>
+                  <value class="value" valueClass="string">false</value>
                 </argument>
                 <argument id="captureAfter">
                   <value class="value" valueClass="string">false</value>
@@ -128,27 +126,23 @@
                   <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Search to test</value>
+                  <value class="value" valueClass="string">Set the Search 12 to test</value>
                 </argument>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" passwordVariableAllowed="true" seq="10000" title="Value">
+                <apiParam group="value" name="value" passwordVariableAllowed="true" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <textType>
-                      <constraints>
-                        <valueConstraint name="mimeType">text/plain</valueConstraint>
-                      </constraints>
-                    </textType>
+                    <textType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                <apiParam group="value" name="blur" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                <apiParam group="value" name="pressEnter" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
