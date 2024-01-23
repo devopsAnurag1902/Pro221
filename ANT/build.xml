@@ -29,7 +29,7 @@
 				excludeCallableTestCases="true" 
 				salesforceMetadataCache="Reuse" 
 				projectCachePath="../../.provarCaches"
-				testOutputlevel="FINEST" 
+				testOutputlevel="DIAGNOSTIC" 
 				pluginOutputlevel="FINEST"
 				stopTestRunOnError="false"
 				secretsPassword="${secrets.password}"
