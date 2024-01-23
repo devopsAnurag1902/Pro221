@@ -30,7 +30,7 @@
 				salesforceMetadataCache="Reuse" 
 				projectCachePath="../../.provarCaches"
 				testOutputlevel="BASIC" 
-				pluginOutputlevel="BASIC"
+				pluginOutputlevel="WARNING"
 				stopTestRunOnError="false"
 				secretsPassword="${secrets.password}"
 				testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
