@@ -19,7 +19,7 @@
       <summary/>
       <values>
         <testVariableValue>
-          <value class="value" valueClass="string">--no-sandbox</value>
+          <value class="value" valueClass="string">--no-sandbox,--disable-dev-shm-usage</value>
         </testVariableValue>
       </values>
     </testVariable>
