@@ -14,7 +14,7 @@
         <connection id="0361bcaa-3ba0-4030-b9da-2414ab954e91" name="google">
           <summary/>
           <connectionUrls>
-            <connectionUrl url="se:baseUrl=http://google.com"/>
+            <connectionUrl url="se:baseUrl=https://google.com"/>
           </connectionUrls>
         </connection>
       </connections>
