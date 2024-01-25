@@ -3,6 +3,7 @@
 	<property name="provar.home" value="/home/ubuntu/Provar/Provar_ANT_2.12.1.1"/>
 	<property name="testproject.home" value=".."/>
 	<property name="testproject.results" value="../ANT/Results"/>
+	<property name="license.path" value="../.licenses"/>
 	<property name="secrets.password" value="${env.ProvarSecretsPassword}"/>
 	<property name="testenvironment.secretspassword" value="${env.ProvarSecretsPassword_EnvName}"/>
 	
@@ -18,6 +19,7 @@
 		<Run-Test-Case provarHome="${provar.home}" 
 				projectPath="${testproject.home}" 
 				resultsPath="${testproject.results}" 
+				licensePath="${license.path}
 				resultsPathDisposition="Replace" 
 				testEnvironment="" 
 				webBrowser="Chrome" 
