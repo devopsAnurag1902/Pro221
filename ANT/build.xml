@@ -13,31 +13,31 @@
 	<taskdef name="Test-Cycle-Report" classname="com.provar.testrunner.ant.TestCycleReportTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
 	
 	<target name="runtests">
-	
-		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
-	
-		<Run-Test-Case provarHome="${provar.home}" 
-				projectPath="${testproject.home}" 
-				resultsPath="${testproject.results}" 
-				licensePath="${license.path}
-				resultsPathDisposition="Replace" 
-				testEnvironment="" 
-				webBrowser="Chrome" 
-				webBrowserConfiguration="Full Screen"
-				webBrowserProviderName="Desktop"
-				webBrowserDeviceName="Full Screen" 
-				excludeCallableTestCases="true" 
-				salesforceMetadataCache="Reuse" 
-				projectCachePath="../../.provarCaches"
-				testOutputlevel="BASIC" 
-				pluginOutputlevel="WARNING"
-				stopTestRunOnError="false"
-				secretsPassword="${secrets.password}"
-				testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
-				invokeTestRunMonitor="true"
-				>
 		
-			<fileset id="testcases" dir="../tests"><include name="Test Case 1.testcase"/></fileset>
+			<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
+		
+			<Run-Test-Case provarHome="${provar.home}" 
+					projectPath="${testproject.home}" 
+					licensePath="${license.path}"
+					resultsPath="${testproject.results}" 
+					resultsPathDisposition="Increment" 
+					testEnvironment="" 
+					webBrowser="Chrome" 
+					webBrowserConfiguration="Full Screen"
+					webBrowserProviderName="Desktop"
+					webBrowserDeviceName="Full Screen" 
+					excludeCallableTestCases="true" 
+					salesforceMetadataCache="Reuse" 
+					projectCachePath="../../.provarCaches"
+					testOutputlevel="BASIC" 
+					pluginOutputlevel="WARNING"
+					stopTestRunOnError="false"
+					secretsPassword="${secrets.password}"
+					testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
+					invokeTestRunMonitor="true"
+					>
+			
+				<fileset dir="../tests"><include name="Test Case 1.testcase"/></fileset>
 
 			<emailProperties sendEmail="true" primaryRecipients="singlanurag@gmail.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
 			<attachmentProperties includeAllFailuresInSummary="true" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="true" includeTestCaseShowSummary="false" includeBasicLogs="true" includeDetailLogs="false" includeDiagnosticTrace="false" includeTestStepTime="false" includeNoScreenshot="false" includeScreenshotThumbnail="false" includeFullScreenShot="true"/>
