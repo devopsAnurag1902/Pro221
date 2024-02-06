@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject guid="5ab075d6-85ca-4608-ade5-b9158cbe26c6" secretsEncryption="JASYPT" selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop">
+<testProject guid="5ab075d6-85ca-4608-ade5-b9158cbe26c6" selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop">
   <title>/PRO1/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
