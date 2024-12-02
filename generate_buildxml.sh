@@ -10,11 +10,11 @@ fi
 # Define the output file
 OUTPUT_FILE="build.xml"
 
-# Create the build.xml file
+# Create the build.xml file with proper variable expansion
 cat <<EOL > $OUTPUT_FILE
 <project default="runtests">
     <property environment="env"/>
-    <property name="provar.home" value="\$1"/>
+    <property name="provar.home" value="$1"/>
     <property name="testproject.home" value=".."/>
     <property name="testproject.results" value="../ANT/Results"/>
     <property name="secrets.password" value="\${env.ProvarSecretsPassword}"/>
@@ -47,7 +47,7 @@ cat <<EOL > $OUTPUT_FILE
                 testEnvironmentSecretsPassword="\${testenvironment.secretspassword}"
                 invokeTestRunMonitor="true">
 
-           
+        
             <fileset id="testcases" dir="../tests"><include name="Test Case 1.testcase"/></fileset>
             
 
@@ -59,4 +59,4 @@ cat <<EOL > $OUTPUT_FILE
 </project>
 EOL
 
-echo "build.xml has been generated with PROVAR_HOME set to '$PROVAR_HOME'."
+echo "build.xml has been generated with PROVAR_HOME set to '$1'."
