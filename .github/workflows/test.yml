@@ -17,10 +17,8 @@ jobs:
       # Install Chrome and Provar
       - name: Run build
         run: |
-          sudo apt-get update && sudo apt-get upgrade
-          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >>sudo tee -a /etc/apt/sources.list.d/google-chrome.list
-          sudo apt-get -y install google-chrome-stable
+          
+          
           mkdir $GITHUB_WORKSPACE/ProvarHome
           curl -O https://download.provartesting.com/latest/Provar_ANT_latest.zip
           unzip -o Provar_ANT_latest.zip -d ProvarHome
@@ -31,15 +29,3 @@ jobs:
           cd $GITHUB_WORKSPACE/ANT
           xvfb-run ant -f build.xml
 
-      # Upload the execution report on success
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Execution Report
-          path: ${{ github.workspace }}/Demo/ANT/Results
-
-      # Upload execution report on failure
-      - uses: actions/upload-artifact@v4
-        if: failure()  # This step will only run if the previous steps fail
-        with:
-          name: Execution Report1
-          path: ${{ github.workspace }}/Demo/ANT/Results
