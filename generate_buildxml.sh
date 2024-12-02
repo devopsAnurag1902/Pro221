@@ -10,11 +10,11 @@ fi
 # Define the output file
 OUTPUT_FILE="build.xml"
 
-# Create the build.xml file with proper variable expansion
+# Create the build.xml file
 cat <<EOL > $OUTPUT_FILE
 <project default="runtests">
     <property environment="env"/>
-    <property name="provar.home" value="$1"/>
+    <property name="provar.home" value="C:/Program Files/Provar21311/"/>
     <property name="testproject.home" value=".."/>
     <property name="testproject.results" value="../ANT/Results"/>
     <property name="secrets.password" value="\${env.ProvarSecretsPassword}"/>
@@ -47,9 +47,13 @@ cat <<EOL > $OUTPUT_FILE
                 testEnvironmentSecretsPassword="\${testenvironment.secretspassword}"
                 invokeTestRunMonitor="true">
 
-        
+            <fileset id="testcases" dir="../tests"></fileset>
+            <fileset id="testcases" dir="../tests"><include name="Test Case 120.testcase"/></fileset>
+            <fileset id="testcases" dir="../tests"><include name="Test Case 121.testcase"/></fileset>
             <fileset id="testcases" dir="../tests"><include name="Test Case 1.testcase"/></fileset>
-            
+            <fileset id="testcases" dir="../tests"><include name="Test Case 114.testcase"/></fileset>
+            <fileset id="testcases" dir="../tests"><include name="Test Case 115.testcase"/></fileset>
+            <fileset id="testcases" dir="../tests"><include name="Test Case 116.testcase"/></fileset>
 
             <emailProperties sendEmail="true" primaryRecipients="prakash.ranjan@provartesting.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="true"/>
             <attachmentProperties includeAllFailuresInSummary="true" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="true" includeTestCaseShowSummary="true" includeBasicLogs="false" includeDetailLogs="false" includeDiagnosticTrace="false" includeTestStepTime="true" includeNoScreenshot="false" includeScreenshotThumbnail="false" includeFullScreenShot="true"/>
