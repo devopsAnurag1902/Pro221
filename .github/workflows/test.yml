@@ -27,8 +27,9 @@ jobs:
           rm Provar_ANT_latest.zip
           mkdir -p $PROVAR_HOME/Provar/.licenses
           echo "$MY_LICENSE" >> $PROVAR_HOME/Provar/.licenses/License.properties
-          cd $GITHUB_WORKSPACE/Demo/ANT
-          xvfb-run ant -f build_jenkins.xml
+          sh generate_buildxml.sh >> $GITHUB_WORKSPACE/ANT
+          cd $GITHUB_WORKSPACE/ANT
+          xvfb-run ant -f build.xml
 
       # Upload the execution report on success
       - uses: actions/upload-artifact@v4
