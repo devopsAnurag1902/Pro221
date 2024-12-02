@@ -27,7 +27,7 @@ jobs:
           rm Provar_ANT_latest.zip
           mkdir -p $PROVAR_HOME/Provar/.licenses
           echo "$MY_LICENSE" >> $PROVAR_HOME/Provar/.licenses/License.properties
-          sh generate_buildxml.sh >> $GITHUB_WORKSPACE/ANT
+          sh generate_buildxml.sh >> $GITHUB_WORKSPACE/ANT/build.xml
           cd $GITHUB_WORKSPACE/ANT
           xvfb-run ant -f build.xml
 
